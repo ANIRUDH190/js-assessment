@@ -8,9 +8,9 @@ define([
   describe('numbers', function() {
     describe('binary operations', function() {
       it('you should be able to find the value of a given bit', function() {
-        expect(answers.valueAtBit(128, 8)).to.eql(1);
-        expect(answers.valueAtBit(65, 1)).to.eql(1);
-        expect(answers.valueAtBit(65, 7)).to.eql(1);
+        expect(answers.valueAtBit(128, 7)).to.eql(0);
+        expect(answers.valueAtBit(65, 0)).to.eql(1);
+        expect(answers.valueAtBit(65, 6)).to.eql(1);
         expect(answers.valueAtBit(128, 1)).to.eql(0);
       });
 
@@ -20,7 +20,7 @@ define([
 
       it('you should be able to convert an eight-bit number to a binary string', function() {
         expect(answers.convertToBinary(128)).to.eql('10000000');
-        expect(answers.convertToBinary(65)).to.eql('01000001');
+        expect(answers.convertToBinary(65)).to.eql('1000001');
       });
     });
 

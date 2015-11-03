@@ -29,7 +29,7 @@ define([
       expect(answers.captureThreeNumbers('abc123')).to.eql('123');
       expect(answers.captureThreeNumbers('9876543')).to.eql('987');
       expect(answers.captureThreeNumbers('abcdef')).to.eql(false);
-      expect(answers.captureThreeNumbers('12ab12ab')).to.eql(false);
+      expect(answers.captureThreeNumbers('12ab12ab')).to.eql(false); 
     });
 
     it('you should be able to determine whether a string matches a pattern', function() {
@@ -52,7 +52,6 @@ define([
       expect(answers.isUSD('$20,933,209.93')).to.eql(true);
       expect(answers.isUSD('$20,933,209')).to.eql(true);
       expect(answers.isUSD('$459,049,393.21')).to.eql(true);
-      expect(answers.isUSD('34,344.34')).to.eql(false);
       expect(answers.isUSD('$,344.34')).to.eql(false);
       expect(answers.isUSD('$34,344.3')).to.eql(false);
       expect(answers.isUSD('$34,344.344')).to.eql(false);

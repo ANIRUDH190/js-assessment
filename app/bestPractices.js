@@ -8,29 +8,31 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     globals : function() {
-      myObject = {
+      var myObject = { /* added var keyword to make it a local variable */
         name : 'Jory'
       };
 
       return myObject;
     },
 
+    getValue : function(val) {
+      return val;
+    },
+
     functions : function(flag) {
       if (flag) {
-        function getValue() { return 'a'; }
+        return this.getValue('a');
       } else {
-        function getValue() { return 'b'; }
+        return this.getValue('b');
       }
-
-      return getValue();
     },
 
     parseInt : function(num) {
-      return parseInt(num);
+      return parseInt(num, 10); /* Added the radix to parseInt */
     },
 
     identity : function(val1, val2) {
-
+      return val1 === val2; /* Added Strict equality using === */
     }
   };
 });

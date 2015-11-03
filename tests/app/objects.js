@@ -48,7 +48,6 @@ define([
     });
 
     it('you should be able to iterate over an object\'s "own" properties', function() {
-      // define a function for fn so that the following will pass
       var C = function() {
         this.foo = 'bar';
         this.baz = 'bim';
